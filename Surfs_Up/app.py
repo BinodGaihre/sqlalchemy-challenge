@@ -37,6 +37,7 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 # route for the home page 
+"""Note for the user and List all available api routes."""
 @app.route("/")
 def welcome():
     return (
@@ -92,6 +93,7 @@ def temp():
 
     return jsonify(data_temp_list)
 
+""" used try and except for the wrong inputs from the users in the following routes"""
 @app.route("/api/v1.0/<start>")
 def temp_stat (start):
     try:
